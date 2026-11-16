@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Dv1K2cm5PzBa_M6_qcUh">
+    <mxGraphModel dx="1671" dy="1111" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Inicio" vertex="1">
+          <mxGeometry height="50" width="120" x="340" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leer" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer temperatura_inicial,&#xa;temperatura_objetivo, incremento" vertex="1">
+          <mxGeometry height="70" width="340" x="230" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="temperatura_objetivo &lt;=&#xa;temperatura_inicial" vertex="1">
+          <mxGeometry height="100" width="300" x="250" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Configuración inválida: la&#xa;temperatura objetivo debe ser&#xa;mayor que la inicial.&quot;" vertex="1">
+          <mxGeometry height="70" width="300" x="620" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="incremento &lt;= 0" vertex="1">
+          <mxGeometry height="90" width="220" x="290" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Configuración inválida: el&#xa;incremento debe ser mayor que 0 °C.&quot;" vertex="1">
+          <mxGeometry height="70" width="300" x="620" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="temperatura_actual = temperatura_inicial&#xa;ciclos = 0" vertex="1">
+          <mxGeometry height="60" width="320" x="240" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="temperatura_actual &lt;&#xa;temperatura_objetivo" vertex="1">
+          <mxGeometry height="100" width="280" x="260" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="upd" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="temperatura_actual = temperatura_actual + incremento&#xa;ciclos = ciclos + 1" vertex="1">
+          <mxGeometry height="60" width="360" x="220" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="out1" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Ciclo &quot;, ciclos, &quot;: &quot;,&#xa;temperatura_actual, &quot; °C&quot;" vertex="1">
+          <mxGeometry height="60" width="300" x="250" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="res" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Temperatura alcanzada: &quot;,&#xa;temperatura_actual, &quot; °C&quot;&#xa;Mostrar &quot;Total de ciclos: &quot;, ciclos" vertex="1">
+          <mxGeometry height="70" width="300" x="620" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Fin" vertex="1">
+          <mxGeometry height="50" width="120" x="710" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="leer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="leer" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="d1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="d1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="m1" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="d1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="d2" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="d2" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="m2" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="d2" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="init" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="d3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="d3" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="upd" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="upd" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="out1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="out1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="d3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="850" />
+              <mxPoint x="150" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="d3" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="res" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="res" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="fin" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="m1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="fin" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="260" />
+              <mxPoint x="980" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="m2" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="fin" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="395" />
+              <mxPoint x="980" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

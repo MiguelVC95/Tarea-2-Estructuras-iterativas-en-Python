@@ -1,0 +1,222 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Dv1K2cm5PzBa_M6_qcUh">
+    <mxGraphModel dx="1393" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Inicio" vertex="1">
+          <mxGeometry height="50" width="120" x="100" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="CAPACIDAD_MAXIMA = 20&#xa;TARIFA_POR_HORA = 800&#xa;vehiculos_presentes = 0&#xa;salidas_registradas = 0&#xa;recaudacion_total = 0" vertex="1">
+          <mxGeometry height="110" width="280" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar menú:&#xa;1. Registrar ingreso&#xa;2. Registrar salida&#xa;3. Consultar ocupación&#xa;4. Consultar recaudación&#xa;5. Salir" vertex="1">
+          <mxGeometry height="120" width="320" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="leer" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer opcion" vertex="1">
+          <mxGeometry height="50" width="240" x="40" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="o1" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="opcion == &quot;1&quot;" vertex="1">
+          <mxGeometry height="80" width="200" x="60" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="b1d" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="vehiculos_presentes &lt;&#xa;CAPACIDAD_MAXIMA" vertex="1">
+          <mxGeometry height="90" width="260" x="340" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="b1s" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="vehiculos_presentes = vehiculos_presentes + 1" vertex="1">
+          <mxGeometry height="60" width="360" x="660" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="b1m" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Ingreso registrado. Vehículos dentro: &quot;,&#xa;vehiculos_presentes" vertex="1">
+          <mxGeometry height="60" width="360" x="660" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="b1n" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Estacionamiento lleno. No&#xa;se puede registrar el ingreso.&quot;" vertex="1">
+          <mxGeometry height="60" width="260" x="340" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="o2" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="opcion == &quot;2&quot;" vertex="1">
+          <mxGeometry height="80" width="200" x="60" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="b2d" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="vehiculos_presentes == 0" vertex="1">
+          <mxGeometry height="90" width="260" x="340" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="b2m" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;No hay vehículos dentro&#xa;del estacionamiento.&quot;" vertex="1">
+          <mxGeometry height="60" width="360" x="660" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="b2l" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer horas_texto" vertex="1">
+          <mxGeometry height="50" width="220" x="360" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="b2v" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="no horas_texto.isdigit() o&#xa;int(horas_texto) == 0" vertex="1">
+          <mxGeometry height="100" width="300" x="320" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="b2vm" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Las horas deben ser un&#xa;número entero mayor que 0.&quot;" vertex="1">
+          <mxGeometry height="60" width="360" x="660" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="b2p" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="horas_cobradas = int(horas_texto)&#xa;monto_pago = horas_cobradas * TARIFA_POR_HORA&#xa;vehiculos_presentes = vehiculos_presentes - 1&#xa;salidas_registradas = salidas_registradas + 1&#xa;recaudacion_total = recaudacion_total + monto_pago" vertex="1">
+          <mxGeometry height="110" width="400" x="270" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="b2o" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Salida registrada. Monto a&#xa;pagar: ₡&quot;, monto_pago" vertex="1">
+          <mxGeometry height="60" width="300" x="320" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="o3" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="opcion == &quot;3&quot;" vertex="1">
+          <mxGeometry height="80" width="200" x="60" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="b3p" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="espacios_libres = CAPACIDAD_MAXIMA - vehiculos_presentes" vertex="1">
+          <mxGeometry height="60" width="380" x="340" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="b3o" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Espacios ocupados: &quot;, vehiculos_presentes&#xa;Mostrar &quot;Espacios libres: &quot;, espacios_libres" vertex="1">
+          <mxGeometry height="80" width="380" x="780" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="o4" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="opcion == &quot;4&quot;" vertex="1">
+          <mxGeometry height="80" width="200" x="60" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="b4o" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Recaudación total: ₡&quot;, recaudacion_total&#xa;Mostrar &quot;Vehículos que han salido: &quot;, salidas_registradas" vertex="1">
+          <mxGeometry height="80" width="420" x="340" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="o5" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="opcion == &quot;5&quot;" vertex="1">
+          <mxGeometry height="80" width="200" x="60" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="b5o" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Vehículos dentro: &quot;, vehiculos_presentes&#xa;Mostrar &quot;Salidas procesadas: &quot;, salidas_registradas&#xa;Mostrar &quot;Recaudación total: ₡&quot;, recaudacion_total" vertex="1">
+          <mxGeometry height="90" width="420" x="340" y="1545" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Fin" vertex="1">
+          <mxGeometry height="50" width="120" x="820" y="1565" as="geometry" />
+        </mxCell>
+        <mxCell id="b6o" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Opción inválida.&#xa;Intente de nuevo.&quot;" vertex="1">
+          <mxGeometry height="60" width="280" x="20" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="init" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="menu" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="leer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="leer" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="o1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="o1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b1d" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="b1d" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b1s" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="b1s" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b1m" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="b1d" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b1n" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="b1m" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="580" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="b1n" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="650" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="o1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="o2" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="o2" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b2d" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="b2d" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b2m" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="b2m" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="760" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="b2d" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b2l" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="b2l" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b2v" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="b2v" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b2vm" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="b2vm" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" target="b2l" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="b2v" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b2p" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="b2p" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b2o" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="b2o" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="1240" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="o2" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="o3" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="o3" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b3p" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="b3p" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b3o" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="b3o" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="1350" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="o3" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="o4" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="o4" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b4o" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="b4o" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="1470" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="o4" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="o5" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="o5" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b5o" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="b5o" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="fin" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="o5" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="b6o" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="b6o" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="1710" />
+              <mxPoint x="1480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Dv1K2cm5PzBa_M6_qcUh">
+    <mxGraphModel dx="1671" dy="1111" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Inicio" vertex="1">
+          <mxGeometry height="50" width="120" x="340" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="const" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="DIAS_SEMANA = 7&#xa;UMBRAL_LITROS = 150&#xa;consumo_total = 0.0&#xa;consumo_maximo = 0.0&#xa;dias_sobre_umbral = 0" vertex="1">
+          <mxGeometry height="100" width="320" x="240" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dia1" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="dia = 1" vertex="1">
+          <mxGeometry height="40" width="200" x="300" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="dc" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="dia &lt;= DIAS_SEMANA" vertex="1">
+          <mxGeometry height="90" width="240" x="280" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="leer" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer consumo_dia" vertex="1">
+          <mxGeometry height="50" width="260" x="270" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="dneg" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="consumo_dia &lt; 0" vertex="1">
+          <mxGeometry height="80" width="220" x="290" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="mneg" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;El consumo no puede ser&#xa;negativo. Intente de nuevo.&quot;" vertex="1">
+          <mxGeometry height="60" width="280" x="620" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="acum" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="consumo_total = consumo_total + consumo_dia" vertex="1">
+          <mxGeometry height="50" width="320" x="240" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="dmax" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="dia == 1 o&#xa;consumo_dia &gt; consumo_maximo" vertex="1">
+          <mxGeometry height="100" width="320" x="240" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="pmax" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="consumo_maximo = consumo_dia" vertex="1">
+          <mxGeometry height="50" width="260" x="620" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="dumb" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="consumo_dia &gt; UMBRAL_LITROS" vertex="1">
+          <mxGeometry height="90" width="300" x="250" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="pumb" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="dias_sobre_umbral =&#xa;dias_sobre_umbral + 1" vertex="1">
+          <mxGeometry height="60" width="300" x="620" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="inc" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="dia = dia + 1" vertex="1">
+          <mxGeometry height="40" width="200" x="300" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="prom" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="promedio_diario = consumo_total / DIAS_SEMANA" vertex="1">
+          <mxGeometry height="50" width="340" x="940" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="out" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Consumo total: &quot;, consumo_total, &quot; L&quot;&#xa;Mostrar &quot;Promedio diario: &quot;, promedio_diario, &quot; L&quot;&#xa;Mostrar &quot;Mayor consumo: &quot;, consumo_maximo, &quot; L&quot;&#xa;Mostrar &quot;Días sobre 150 L: &quot;, dias_sobre_umbral" vertex="1">
+          <mxGeometry height="110" width="380" x="920" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Fin" vertex="1">
+          <mxGeometry height="50" width="120" x="1050" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="const" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="const" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dia1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="dia1" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="dc" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="leer" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="leer" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dneg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="dneg" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="mneg" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="mneg" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" target="leer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="dneg" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="acum" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="acum" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dmax" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="dmax" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="pmax" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="dmax" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dumb" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="pmax" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="dumb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="dumb" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="pumb" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="dumb" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="inc" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="pumb" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="inc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="inc" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="dc" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="1040" />
+              <mxPoint x="160" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="dc" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;" target="prom" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="prom" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="out" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="fin" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
