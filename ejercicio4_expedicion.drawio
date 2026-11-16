@@ -1,0 +1,250 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Dv1K2cm5PzBa_M6_qcUh">
+    <mxGraphModel dx="1393" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Inicio" vertex="1">
+          <mxGeometry height="50" width="120" x="240" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="const" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="AGUA_INICIAL = 150.0&#xa;ALIMENTO_INICIAL = 100.0&#xa;JORNADAS_MINIMAS = 1&#xa;JORNADAS_MAXIMAS = 30" vertex="1">
+          <mxGeometry height="90" width="320" x="140" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="leerj" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer jornadas_texto" vertex="1">
+          <mxGeometry height="50" width="300" x="150" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dj" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="no jornadas_texto.isdigit() o&#xa;int(jornadas_texto) &lt; JORNADAS_MINIMAS o&#xa;int(jornadas_texto) &gt; JORNADAS_MAXIMAS" vertex="1">
+          <mxGeometry height="140" width="420" x="90" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="mj" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Debe ser un entero entre &quot;,&#xa;JORNADAS_MINIMAS, &quot; y &quot;, JORNADAS_MAXIMAS" vertex="1">
+          <mxGeometry height="60" width="320" x="560" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="cantidad_jornadas = int(jornadas_texto)&#xa;agua_disponible = AGUA_INICIAL&#xa;alimento_disponible = ALIMENTO_INICIAL&#xa;agua_consumida = 0.0&#xa;alimento_consumido = 0.0&#xa;dias_completados = 0&#xa;expedicion_interrumpida = False&#xa;dia = 1" vertex="1">
+          <mxGeometry height="170" width="380" x="110" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="dloop" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="dia &lt;= cantidad_jornadas" vertex="1">
+          <mxGeometry height="90" width="260" x="170" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="drec" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="agua_disponible == 0 o&#xa;alimento_disponible == 0" vertex="1">
+          <mxGeometry height="100" width="340" x="130" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="pint" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="expedicion_interrumpida = True&#xa;(break)" vertex="1">
+          <mxGeometry height="60" width="320" x="540" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="mdisp" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Jornada &quot;, dia, &quot; de &quot;, cantidad_jornadas&#xa;Mostrar &quot;Disponible: &quot;, agua_disponible, &quot; L | &quot;,&#xa;alimento_disponible, &quot; u.&quot;" vertex="1">
+          <mxGeometry height="70" width="420" x="90" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="leera" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer consumo_agua" vertex="1">
+          <mxGeometry height="50" width="260" x="170" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="dva" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="consumo_agua &lt;= 0 o&#xa;consumo_agua &gt; agua_disponible" vertex="1">
+          <mxGeometry height="100" width="380" x="110" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="mva" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Inválido: debe ser mayor que 0&#xa;y no superar &quot;, agua_disponible, &quot; L.&quot;" vertex="1">
+          <mxGeometry height="60" width="320" x="560" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="leerf" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Leer consumo_alimento" vertex="1">
+          <mxGeometry height="50" width="260" x="170" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="dvf" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="consumo_alimento &lt;= 0 o&#xa;consumo_alimento &gt; alimento_disponible" vertex="1">
+          <mxGeometry height="100" width="380" x="110" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="mvf" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Inválido: debe ser mayor que 0&#xa;y no superar &quot;, alimento_disponible, &quot; u.&quot;" vertex="1">
+          <mxGeometry height="60" width="320" x="560" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="proc" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="agua_disponible = round(agua_disponible - consumo_agua, 2)&#xa;alimento_disponible = round(alimento_disponible - consumo_alimento, 2)&#xa;agua_consumida = agua_consumida + consumo_agua&#xa;alimento_consumido = alimento_consumido + consumo_alimento&#xa;dias_completados = dias_completados + 1" vertex="1">
+          <mxGeometry height="110" width="460" x="70" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="msaldo" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Saldo: &quot;, agua_disponible, &quot; L | &quot;,&#xa;alimento_disponible, &quot; u.&quot;" vertex="1">
+          <mxGeometry height="60" width="380" x="110" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="inc" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="dia = dia + 1" vertex="1">
+          <mxGeometry height="40" width="200" x="200" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="pprom0" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="promedio_agua = 0.0&#xa;promedio_alimento = 0.0" vertex="1">
+          <mxGeometry height="60" width="340" x="980" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="dprom" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="dias_completados &gt; 0" vertex="1">
+          <mxGeometry height="90" width="300" x="1000" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="pprom" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="promedio_agua = agua_consumida / dias_completados&#xa;promedio_alimento = alimento_consumido / dias_completados" vertex="1">
+          <mxGeometry height="70" width="400" x="1360" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="dint" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="no expedicion_interrumpida" vertex="1">
+          <mxGeometry height="100" width="280" x="1010" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="pcomp" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="estado_expedicion = &quot;Completada&quot;" vertex="1">
+          <mxGeometry height="60" width="320" x="1360" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="dambos" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="agua_disponible == 0 y&#xa;alimento_disponible == 0" vertex="1">
+          <mxGeometry height="100" width="320" x="990" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="pamb" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="estado_expedicion = &quot;Interrumpida:&#xa;se agotaron agua y alimento&quot;" vertex="1">
+          <mxGeometry height="60" width="400" x="1360" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="dagua" parent="1" style="rhombus;whiteSpace=wrap;html=0;" value="agua_disponible == 0" vertex="1">
+          <mxGeometry height="90" width="280" x="1010" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="pagu" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="estado_expedicion = &quot;Interrumpida:&#xa;se agotó el agua&quot;" vertex="1">
+          <mxGeometry height="60" width="400" x="1360" y="1225" as="geometry" />
+        </mxCell>
+        <mxCell id="palim" parent="1" style="rounded=0;whiteSpace=wrap;html=0;" value="estado_expedicion = &quot;Interrumpida:&#xa;se agotó el alimento&quot;" vertex="1">
+          <mxGeometry height="60" width="380" x="960" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="informe" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;whiteSpace=wrap;html=0;" value="Mostrar &quot;Días completados: &quot;, dias_completados, &quot; de &quot;, cantidad_jornadas&#xa;Mostrar &quot;Agua consumida: &quot;, agua_consumida, &quot; L&quot;&#xa;Mostrar &quot;Alimento consumido: &quot;, alimento_consumido, &quot; u.&quot;&#xa;Mostrar &quot;Agua restante: &quot;, agua_disponible, &quot; L&quot;&#xa;Mostrar &quot;Alimento restante: &quot;, alimento_disponible, &quot; u.&quot;&#xa;Mostrar &quot;Promedio diario agua: &quot;, promedio_agua, &quot; L&quot;&#xa;Mostrar &quot;Promedio diario alimento: &quot;, promedio_alimento, &quot; u.&quot;&#xa;Mostrar &quot;Estado: &quot;, estado_expedicion" vertex="1">
+          <mxGeometry height="200" width="500" x="900" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=0;" value="Fin" vertex="1">
+          <mxGeometry height="50" width="120" x="1090" y="1710" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="const" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="const" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="leerj" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="leerj" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dj" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="dj" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="mj" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="mj" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" target="leerj" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="dj" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="init" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dloop" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="dloop" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="drec" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="drec" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pint" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="drec" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="mdisp" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="mdisp" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="leera" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="leera" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dva" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="dva" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="mva" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="mva" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" target="leera" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="dva" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="leerf" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="leerf" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dvf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="dvf" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="mvf" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="mvf" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" target="leerf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="dvf" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="proc" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="proc" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="msaldo" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="msaldo" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="inc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="inc" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="dloop" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="1780" />
+              <mxPoint x="40" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="dloop" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pprom0" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="pint" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pprom0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="870" />
+              <mxPoint x="920" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="pprom0" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dprom" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="dprom" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pprom" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="dprom" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dint" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="pprom" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="dint" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1560" y="905" />
+              <mxPoint x="1150" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="dint" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pcomp" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e30" edge="1" parent="1" source="dint" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dambos" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e31" edge="1" parent="1" source="dambos" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pamb" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e32" edge="1" parent="1" source="dambos" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="dagua" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e33" edge="1" parent="1" source="dagua" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pagu" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e34" edge="1" parent="1" source="dagua" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="palim" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e35" edge="1" parent="1" source="pcomp" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="informe" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="980" />
+              <mxPoint x="1820" y="1570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" edge="1" parent="1" source="pamb" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="informe" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="1120" />
+              <mxPoint x="1820" y="1570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" edge="1" parent="1" source="pagu" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="informe" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="1255" />
+              <mxPoint x="1820" y="1570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" edge="1" parent="1" source="palim" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="informe" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e39" edge="1" parent="1" source="informe" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;" target="fin" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
