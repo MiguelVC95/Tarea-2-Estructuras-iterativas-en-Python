@@ -93,13 +93,13 @@ botón **Run Python File** (▶) en la esquina superior derecha.
     │   ├── Tarea2_Documentacion.pdf
     │   └── Diagramas/
     │       ├── ejercicio1_temperatura.drawio
-    │       ├── ejercicio1_temperatura.png
+    │       ├── ejercicio1_temperatura.drawio.png
     │       ├── ejercicio2_consumo_agua.drawio
-    │       ├── ejercicio2_consumo_agua.png
+    │       ├── ejercicio2_consumo_agua.drawio.png
     │       ├── ejercicio3_estacionamiento.drawio
-    │       ├── ejercicio3_estacionamiento.png
+    │       ├── ejercicio3_estacionamiento.drawio.png
     │       ├── ejercicio4_expedicion.drawio
-    │       └── ejercicio4_expedicion.png
+    │       └── ejercicio4_expedicion.drawio.png
     └── README.md
 
 ---
