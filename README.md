@@ -2,14 +2,15 @@
 
 Repositorio con la solución de la Tarea 2 del curso **Principios de Programación 1**.
 Contiene cuatro programas de consola que resuelven problemas usando ciclos `while` y `for`,
-los seis laboratorios guiados realizados en clase y la documentación con tablas de variables,
-diagramas de flujo y casos de prueba.
+y la documentación técnica con tablas de variables, diagramas de flujo y casos de prueba.
+
+> Por indicación del docente, los laboratorios guiados no forman parte de esta entrega.
 
 ---
 
 ## Descripción
 
-En esta tarea se desarrollaron cuatro soluciones independientes basadas en situaciones reales:
+Se desarrollaron cuatro soluciones independientes basadas en situaciones operativas:
 
 - Control de temperatura de una cámara experimental.
 - Registro semanal de consumo de agua.
@@ -44,22 +45,11 @@ sin usar `sum()` ni `max()`**, tal como lo pide la consigna.
 | `ejercicio3_estacionamiento.py` | `while True` + `if/elif/else` | Menú para registrar ingresos y salidas, controlar la capacidad de 20 espacios y cobrar ₡800 por hora. |
 | `ejercicio4_expedicion.py` | `for` + `while` + `break` | Simula las jornadas de una expedición, valida consumos de agua y alimento e interrumpe la misión si un recurso se agota. |
 
-### Laboratorios guiados
-
-| Laboratorio | Tema |
-|---|---|
-| `lab1_menu` | Menú y selección de opciones |
-| `lab2_condicional_multiple` | Uso de `if`, `elif` y `else` |
-| `lab3_ciclos_while` | Condición de repetición, actualización y salida |
-| `lab4_ciclos_for` | Iteraciones definidas con `for` y `range()` |
-| `lab5_menu_while_true` | Menú repetitivo con `while True` |
-| `lab6_colecciones` | Operaciones con colecciones según la guía de clase |
-
 ---
 
 ## Requisitos previos
 
-- [Python 3.10](https://www.python.org/downloads/) o superior.
+- [Python 3](https://www.python.org/downloads/) (probado con Python 3.13).
 - [Visual Studio Code](https://code.visualstudio.com/) con la extensión de Python (recomendado).
 - Git, para clonar el repositorio.
 
@@ -75,8 +65,8 @@ Para verificar la versión de Python instalada:
 
 **Paso 1.** Clonar el repositorio:
 
-    git clone https://github.com/[tu-usuario]/[nombre-del-repo].git
-    cd [nombre-del-repo]
+    git clone https://github.com/MiguelVC95/Tarea-2-Estructuras-iterativas-en-Python.git
+    cd Tarea-2-Estructuras-iterativas-en-Python
 
 **Paso 2.** Entrar a la carpeta de ejercicios y ejecutar el programa deseado:
 
@@ -86,11 +76,6 @@ Para verificar la versión de Python instalada:
     python ejercicio3_estacionamiento.py
     python ejercicio4_expedicion.py
 
-**Paso 3.** Para ejecutar un laboratorio:
-
-    cd laboratorios/lab1_menu
-    python [nombre_del_archivo].py
-
 También se puede abrir cualquier archivo `.py` en Visual Studio Code y ejecutarlo con el
 botón **Run Python File** (▶) en la esquina superior derecha.
 
@@ -98,27 +83,23 @@ botón **Run Python File** (▶) en la esquina superior derecha.
 
 ## Estructura del repositorio
 
-    [nombre-del-repo]/
-    ├── ejercicios/
+    Tarea-2-Estructuras-iterativas-en-Python/
+    ├── Ejercicios/
     │   ├── ejercicio1_temperatura.py
     │   ├── ejercicio2_consumo_agua.py
     │   ├── ejercicio3_estacionamiento.py
     │   └── ejercicio4_expedicion.py
-    ├── laboratorios/
-    │   ├── lab1_menu/
-    │   ├── lab2_condicional_multiple/
-    │   ├── lab3_ciclos_while/
-    │   ├── lab4_ciclos_for/
-    │   ├── lab5_menu_while_true/
-    │   └── lab6_colecciones/
-    ├── documentacion/
+    ├── Documentacion/
     │   ├── Tarea2_Documentacion.pdf
-    │   └── diagramas/
+    │   └── Diagramas/
     │       ├── ejercicio1_temperatura.drawio
+    │       ├── ejercicio1_temperatura.png
     │       ├── ejercicio2_consumo_agua.drawio
+    │       ├── ejercicio2_consumo_agua.png
     │       ├── ejercicio3_estacionamiento.drawio
-    │       └── ejercicio4_expedicion.drawio
-    ├── .gitignore
+    │       ├── ejercicio3_estacionamiento.png
+    │       ├── ejercicio4_expedicion.drawio
+    │       └── ejercicio4_expedicion.png
     └── README.md
 
 ---
@@ -127,11 +108,15 @@ botón **Run Python File** (▶) en la esquina superior derecha.
 
 El archivo `documentacion/Tarea2_Documentacion.pdf` incluye para cada ejercicio:
 
+- Descripción del problema y decisiones de diseño.
 - Tabla de variables (nombre, tipo de dato, descripción y clasificación).
 - Diagrama de flujo.
 - Casos de prueba con entradas, resultado esperado, resultado obtenido, estado y evidencia de ejecución.
 
-Los diagramas también están en formato editable (`.drawio`) en la carpeta `documentacion/diagramas/`.
+Los diagramas de flujo se encuentran en la carpeta `documentacion/diagramas/` en dos formatos:
+
+- **`.drawio`:** formato editable, se abre en [draw.io](https://app.diagrams.net).
+- **`.png`:** imagen para visualización rápida.
 
 ---
 
@@ -149,7 +134,7 @@ Los diagramas también están en formato editable (`.drawio`) en la carpeta `doc
 
 **Miguel Angel Vargas Cedeño**
 Estudiante de Ingeniería del Software
-GitHub: @MiguelVC95 (https://github.com/MiguelVC95)
+GitHub: [@MiguelVC95](https://github.com/MiguelVC95)
 
 ---
 
@@ -160,6 +145,7 @@ GitHub: @MiguelVC95 (https://github.com/MiguelVC95)
 | **Universidad** | Universidad CENFOTEC |
 | **Escuela** | Escuela de Ingeniería del Software |
 | **Curso** | SOFT-01 — Principios de Programación 1 |
+| **Sección** | SCP0 |
 | **Periodo** | 2026-C3 |
 | **Docente** | Dario Rodríguez Obando |
 | **Fecha de entrega** | 22 de noviembre de 2026 |
@@ -168,4 +154,4 @@ GitHub: @MiguelVC95 (https://github.com/MiguelVC95)
 
 ## Estado del proyecto
 
-🟢 Finalizado — versión 1.0
+🟢 **Finalizado — versión 1.0**
